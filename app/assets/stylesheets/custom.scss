@@ -133,3 +133,9 @@ input {
     color: $state-danger-text;
   }
 }
+
+.splitcontent {
+  overflow:auto;
+  width: 45%;
+  padding: 10px;
+}
