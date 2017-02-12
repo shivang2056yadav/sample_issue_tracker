@@ -3,9 +3,9 @@
 one:
   subject: MyString
   description: MyText
-  assigned_to: 1
+  assigned_to_id: 1
 
 two:
   subject: MyString
   description: MyText
-  assigned_to: 1
+  assigned_to_id: 1

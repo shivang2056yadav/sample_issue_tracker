@@ -3,7 +3,7 @@ class CreateIssues < ActiveRecord::Migration[5.0]
     create_table :issues do |t|
       t.string :subject
       t.text :description
-      t.integer :assigned_to
+      t.integer :assigned_to_id
 
       t.timestamps
     end

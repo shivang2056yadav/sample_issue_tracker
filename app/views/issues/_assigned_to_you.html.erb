@@ -1,0 +1,21 @@
+<% issues = assigned_issues %>
+<div class="list">
+  <table class='table table-striped table-bordered table-sm table-hover'>
+    <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% issues.each do |issue| %>
+        <tr>
+          <td><%= issue.subject %></td>
+          <td><%= issue.description %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <%= paginate issues %>
+  <%= page_entries_info issues %>
+</div>
