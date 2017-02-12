@@ -1,13 +1,15 @@
 <% if user_signed_in? %>
     <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "New Issue", '#', class: "btn rounded gradient-orange fe_back" %></li>
-      <li><%= link_to "View all Issue", '#', class: "btn rounded gradient-orange fe_back" %></li>
+      <li><%= link_to "New Issue", new_issue_path, class: "btn rounded gradient-orange fe_back" %></li>
+      <li><%= link_to "View all Issues", issues_path, class: "btn rounded gradient-orange fe_back" %></li>
       </ul>
   <h1>Issues assigned to you</h1>
-    <%= render %>
+    <%= render 'issues/assigned_to_you'%>
 <%else%>
   <div class="center jumbotron">
     <h1>Welcome to the Issue Tracker</h1>
+    </br>
+    </br>
     <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
   </div>
 <% end %>
