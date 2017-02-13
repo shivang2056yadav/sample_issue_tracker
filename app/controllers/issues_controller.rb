@@ -2,7 +2,7 @@ class IssuesController < ApplicationController
   before_action :set_issue, only: [:edit, :update, :destroy]
 
   def index
-    @issues = Issue.all.order(:id).page(params[:page]).per(8)
+    @issues = Issue.includes(:assigned_to).all.order(:id).page(params[:page]).per(8)
   end
 
   def new
